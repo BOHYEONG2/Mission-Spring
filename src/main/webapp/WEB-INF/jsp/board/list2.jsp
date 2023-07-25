@@ -23,6 +23,11 @@
 		<td>
 			<a href="${ pageContext.request.contextPath }/board/${ board.no }">
 				${ board.title }
+				<%-- //////////////////////////// --%>
+				<c:if test="${ board.replyCnt ne 0 }">
+					[${ board.replyCnt }]
+				</c:if>
+				<%-- //////////////////////////// --%>
 			</a>
 		</td>
 		<td>${ board.writer }</td>
